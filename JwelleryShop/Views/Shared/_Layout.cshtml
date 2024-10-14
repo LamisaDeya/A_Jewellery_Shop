@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Styles.Render("~/Content/css")*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+serif:ital,wght@0,300;0,500;0,700;1,400&family=montserrat&family=mukta:wght@800&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link href="https://fonts.googleapis.com/css2?family=roboto+condensed:ital,wght@1,300&display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+
+    <div class="index">
+        <div class="text-center p-1" style="background-color: black; width: 100%; height: 30px; position: fixed; z-index: 1; margin-top: -30px">
+            <p style="color: #eec77e;">
+                Free shipping on orders over
+                <span style="color: #cc2950;">TK.750</span>
+            </p>
+        </div>
+        <div class="container">
+            <header>
+                <div class="row p-4" style="margin-top: 30px;">
+                    <div class="col-6 col-md-3 center-div">
+                        <div class="sidebtn" style="cursor: pointer; transition: left 0.4s ease; font-size: 2rem;">
+                            <span>
+                                <ion-icon name="reorder-three-outline"></ion-icon>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-6  col-md-6 center-image">
+                        <img src="image/logo2.png" width="200px" height="45px" />
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <ul class="nav  m-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" Style="text-decoration: none; color: black;">
+                                    <i class="fas fa-user"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" Style="text-decoration: none; color: black;">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" Style="text-decoration: none; color: black;">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" Style="text-decoration: none; color: black;">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <nav class="sidebar">
+            <div class="searchbar">
+
+
+                <input type="text" placeholder="   Search our store" class="no-outline">
+
+                <div class="searchicon">
+
+
+                    <a href="#" style="color:white;">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="main">
+
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a class="probtn" href="#">
+                            Products
+                            <span class="first">
+                                <ion-icon name="caret-down-outline"></ion-icon>
+                            </span>
+
+                            <ul class="pro_show">
+                                <li>
+                                    <a href="#">
+                                        Earrings
+
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        Necklace
+                                    </a>
+                                </li>
+
+                                <li><a href="#">Pendannt</a></li>
+                                <li><a href="#">Choker</a></li>
+
+                                <li><a href="#">Rings</a></li>
+                                <li><a href="#">Bracelets</a></li>
+                                <li><a href="#">Sunglass</a></li>
+                                <li><a href="#">Watch</a></li>
+                            </ul>
+                    </li>
+
+                    <li><a href="#">December 21's Sale</a></li>
+                    <li><a href="#">NEW ARRIVALS</a></li>
+                    <li class="small"><a href="#">Log In</a></li>
+                    <li class="small"><a href="#">Create Account</a></li>
+                    <li class="small"><a href="#">About Us</a></li>
+                    <li class="small"><a href="#">Contact Us</a></li>
+                    <li class="small"><a href="#">FAQs</a></li>
+                    <li class="small"><a href="#">Refund Policy</a></li>
+                    <li class="small"><a href="#">Shipping Policy</a></li>
+                    <li class="small"><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <script>
+            $('.sidebtn').click(function () {
+                $(this).toggleClass("click");
+                $('.sidebar').toggleClass("show");
+            });
+            $('.probtn').click(
+                function () {
+                    $('nav ul.pro_show').toggleClass("show");
+                    $('nav ul.first').toggleClass("rotate");
+                }
+            );
+        </script>
+        <section id="cover" class="container-fluid">
+            <div class="cvr">
+                <p>BE BOLD.BE BEAUTIFUL</p>
+                <p id="big">BE DAZZLED</p>
+                <button class="o">SALE 40% OFF</button>
+
+            </div>
+
+        </section>
+        <div class="salediv">
+            <div class="sale">
+                <h1>THIS MONTH'S SALE</h1>
+                <br />
+                <p>
+                    Let's celebrate this month with something special! Get 40% OFF<br />
+                    when you buy 2 or more products!
+                </p>
+                <br />
+                <p>Also <strong id="st">FREE SHIPPING </strong>(only when you spend Tk 750 or more).</p>
+                <br />
+                <p>
+                    NO DISCOUNT CODE NEEDED- YOU WILL SEE AN AUTOMATIC<br />
+                    DISCOUNT IN CART!
+                </p>
+                <br />
+
+                <button class="btnclk">LET'S GO!CLICK HERE </button>
+
+            </div>
+
+            <div class="saleimg img-fluid">
+                <img src="Image/sale.png" />
+
+            </div>
+        </div>
+
+        <div class="collection">
+            <h2>Collection list</h2>
+            <hr class="hor" style="height: 3px; width: 55px;background-color:black;font-weight:bolder" />
+        </div>
+        <div class="grid">
+            <div class="i1">
+
+                <a href="earring.html" target="blank"><img src="Image/earrings.png" width="95%" height="95%"></a>
+            </div>
+            <div class="i2">
+                <a href="#"><img src="Image/pendant.png" width="95%" height="95%"></a>
+            </div>
+            <div class="i3">
+                <a href="#"><img src="Image/necklace.png" width="95%" height="95%"></a>
+            </div>
+            <div class="i4">
+                <a href="#"><img src="Image/bracelet.png" width="95%" height="95%"></a>
+            </div>
+            <div class="i4">
+                <a href="#"><img src="Image/ring.png" width="95%" height="95%"></a>
+            </div>
+            <div class="i4">
+                <a href="#"><img src="Image/sunglass.png" width="95%" height="95%"></a>
+            </div>
+        </div>
+
+
+        <div class="collection2">
+            <h2>Welcome to Arvesa</h2>
+            <hr class="hor" style="height: 3px; width: 55px;background-color:black;">
+        </div>
+        <div class="grid2">
+
+            <div class="i2">
+                <a href="#"><img src="Image/new (1).png"></a>
+            </div>
+            <div class="i3">
+                <a href="#"><img src="Image/new (2).png"></a>
+            </div>
+            <div class="i4">
+                <a href="#"><img src="Image/new (3).png"></a>
+            </div>
+
+        </div>
+
+        <div class="propic">
+            <div class="pic">
+                <video width="600" height="500" src="Image/video.mp4" loop autoplay muted></video>
+
+            </div>
+            <div class="txt">
+                <h1>TRUSTWORTHY REPUTATION</h1>
+                <br>
+                <p>
+                    17ARVESA believes in longterm relationships and extraordinary<br>
+                    <br>
+                    customer service in every aspect of the business. You can trust us<br>
+                    <br>
+                    with your confidence in us, as it is exactly what keeps our fanbase<br>
+                    <br>
+                    extremely loyal. Please take a look at our <strong>Facebook page</strong> for real<br>
+                    <br>
+                    verified reviews from 100s of customers.
+                </p>
+                <br>
+                <br>
+                <button class="btnclk">SHOP NOW</button>
+
+
+            </div>
+        </div>
+        <div class="collection3">
+            <h2>Featured Products</h2>
+            <hr class="hor" style="height: 3px; width: 55px;background-color:black;">
+        </div>
+        <div class="grid3">
+            <div class="i1">
+
+                <a href="#"><img src="~/Image/earrings.png"></a>
+                <div class="desc">
+                    <p class="g">Floral hearted pendant-001</p>
+                    <p>-TK 550</p>
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="i2">
+                <a href="#"><img src="~/Image/pendant.png"></a>
+                <div class="desc">
+                    <p class="g">Floral hearted pendant-001</p>
+                    <p>-TK 550</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="i3">
+                <a href="#"><img src="~/Image/bracelet.png"></a>
+                <div class="desc">
+                    <p class="g">Floral hearted pendant-001</p>
+                    <p>-TK 550</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="i4">
+                <a href="#"><img src="~/Image/earrings.png"></a>
+                <div class="desc">
+                    <p class="g">Floral hearted pendant-001</p>
+                    <p>-TK 550</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="i4">
+                <a href="#"><img src="~/Image/ring.png"></a>
+                <div class="desc">
+                    <p class="g">Floral hearted pendant-001</p>
+                    <p>-TK 550</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="i4">
+                <a href="#"><img src="~/Image//bracelet.png"></a>
+                <div class="desc">
+                    <p class="g">Floral hearted pendant-001</p>
+                    <p>-TK 550</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="i4">
+                <a href="#"><img src="~/Image/bracelet.png"></a>
+                <div class="desc">
+                    <p class="g">Floral hearted pendant-001</p>
+                    <p>-TK 550</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="i4">
+                <a href="#"><img src="~/Image/bracelet.png"></a>
+                <div class="desc">
+                    <p class="g">Floral hearted pendant-001</p>
+                    <p>-TK 550</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="subscribe" style="text-align: center; background-color: #F6F6F6; box-sizing: border-box; height: 350px; padding: 10px;">
+            <h1>Subscribe to our newsletter</h1>
+            <br>
+
+            <p class="g">Promotions, new products and sales. Directly to your inbox.</p>
+            <br>
+            <br>
+            <hr class="hor2">
+            <br>
+            <br>
+            <br>
+
+            <div class="boro">
+                <input type="text" placeholder="  Your Email">
+                <div class="choto">
+                    <button class="btnclk2">SUBSCRIBE</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="ad">
+            <h2>Location</h2>
+            <hr class="hor" style="height: 3px; width: 55px;background-color:black;font-weight:bolder">
+        </div>
+        <div>
+            <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.7476050821424!2d90.36441552149255!3d23.756378235285823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf3eeecd02b5%3A0x91baa84d8e6af61b!2sARVESA!5e0!3m2!1sen!2sbd!4v1679100341909!5m2!1sen!2sbd"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+        <div class="ad">
+            <hr class="hor" style="height: 3px; width: 55px;background-color:black;font-weight:bolder">
+        </div>
+        <div class="contact">
+
+            <div>
+                <a href="#" style="text-decoration: none; color: black ">About Us</a><br>
+                <a href="#" style="text-decoration: none; color: black ">Contact Us</a><br>
+                <a href="FAQs.html" style="text-decoration: none; color: black ">FAQs</a>
+            </div>
+            <div>
+                <a href="refund.html" style="text-decoration: none; color: black ">Refund Policy</a><br>
+                <a href="shipping.html" style="text-decoration: none; color: black ">Shipping Policy</a><br>
+                <a href="#" style="text-decoration: none; color: black ">Terms of Conditioin</a>
+            </div>
+            <div>
+                <a href="#" class="fi" style="text-decoration: none; color: black "><ion-icon class="icon" name="logo-facebook"></ion-icon>Facebook</a><br>
+                <a href="#" class="fi" style="text-decoration: none; color: black"><ion-icon class="icon" name="logo-instagram"></ion-icon>Instagram</a>
+            </div>
+            <div>
+                <p>&copy;2023, 17ARVESA</p>
+                <p>Powered by Shopify</p>
+            </div>
+        </div>
+        <div class="f">
+            <img src="~/Image/footer.png" width="1000px">
+        </div>
+    </div>
+    @RenderBody()
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
